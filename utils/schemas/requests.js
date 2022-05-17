@@ -18,7 +18,9 @@ const requestsSchema = new mongoose.Schema({
   tier: Number,
   assignedTo: [{ type: ObjectId }],
   created_at: { type: Date, default: Date.now },
+  updated_at: { type: Date, default: Date.now },
   created_by_user: { type: String, default: 'System' },
+  updated_by_user: { type: String, default: 'System' },
 });
 
 const Requests = mongoose.model('Requests', requestsSchema);
